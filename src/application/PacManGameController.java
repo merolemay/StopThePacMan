@@ -1,6 +1,5 @@
 package application;
 
-import java.awt.Color;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,6 +17,8 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Arc;
 import javafx.scene.shape.ArcType;
 import javafx.stage.Stage;
@@ -68,6 +69,7 @@ public class PacManGameController implements Initializable {
 		while(!loadTheFile());
 		turnInR();
 	}
+	
 	public void gamePacmans() {
 		PacManThread[] hilos = new PacManThread[pacManGame.getVectorPacMan().size()];
 		for (int i = 0; i < hilos.length; i++) {
@@ -80,12 +82,14 @@ public class PacManGameController implements Initializable {
 			Arc arc = new Arc();
 			arc.setCenterX(pacManGame.getVectorPacMan().get(i).getPosX()); 
 			arc.setCenterY(pacManGame.getVectorPacMan().get(i).getPosY()); 
-			arc.setRadiusX(25.0f); 
-			arc.setRadiusY(25.0f); 
+			arc.setRadiusX(20.0f); 
+			arc.setRadiusY(20.0f); 
 			arc.setStartAngle(40.0f); 
 			arc.setLength(239.0f); 
+			arc.setFill(Color.YELLOW);
 			arc.setType(ArcType.ROUND);
 			boxM.getChildren().add(arc);
+			gamePacmans();
 		}
 	}
 	public boolean loadTheFile() {

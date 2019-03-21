@@ -6,7 +6,6 @@ import application.PacManGameController;
 public class PacManThread extends Thread {
 	
 	private PacMan p;
-	private PacManGameController fx;
 	public PacManThread(PacMan p) {
 		this.p = p;
 	}
@@ -15,7 +14,7 @@ public class PacManThread extends Thread {
 	public void run() {
 		while(!p.getCathched()){
 			try {
-				p.bite(fx.getWidth(), fx.getHigh());
+				p.bite(450,400);
 				Thread.sleep(p.getWait());
 			} catch (InterruptedException e) {
 				e.printStackTrace();
