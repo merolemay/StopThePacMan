@@ -1,0 +1,19 @@
+#nivel
+2
+#radio posX posY espera direccion rebotes
+5	70	110	1	IZQUIERDA	0	false
+10	120	180	2	DERECHA	0	false
+15	350	230	3	ARRIBA	0	false
+3	240	10	4	ABAJO	0	false
+8	70	70	5	ARRIBA	0	false
+13	120	140	4	ABAJO	0	false
+18	380	210	3	DERECHA	0	false
+7	210	20	2	IZQUIERDA	0	false
+12	40	380	1	IZQUIERDA	0	false
+17	80	220	2	DERECHA	0	false
+2	60	50	3	ARRIBA	0	false
+4	100	340	4	ABAJO	0	false
+6	130	310	5	ARRIBA	0	false
+9	150	280	4	ABAJO	0	false
+11	170	90	3	DERECHA	0	false
+14	270	95	2	IZQUIERDA	0	false
